@@ -11,7 +11,7 @@ class FormIn extends Component {
       visitorCompany: '',
       visitedName: '',
       reasonOptions: [],
-      ReasonSelection: ''
+      reasonSelection: ''
     };
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleClearForm = this.handleClearForm.bind(this);
@@ -30,7 +30,7 @@ class FormIn extends Component {
           visitorCompany: data.visitorCompany,
           visitedName: data.visitedName,
           reasonOptions: data.reasonOptions,
-          ReasonSelection: data.ReasonSelection
+          reasonSelection: data.reasonSelection
         });
       });
   }
@@ -48,7 +48,7 @@ class FormIn extends Component {
   }
 
   handleReasonSelect(e) {
-    this.setState({ ReasonSelection: e.target.value }, () => console.log('reason', this.state.ReasonSelection));
+    this.setState({ reasonSelection: e.target.value }, () => console.log('reason', this.state.reasonSelection));
   }
 
   handleClearForm(e) {
@@ -57,7 +57,7 @@ class FormIn extends Component {
       visitorName: '',
       visitorCompany: '',
       visitedName: '',
-      ReasonSelection: ''
+      reasonSelection: ''
     });
   }
 
@@ -67,26 +67,27 @@ class FormIn extends Component {
       visitorName: this.state.visitorName,
       visitorCompany: this.state.visitorCompany,
       visitedName: this.state.visitedName,
-      ReasonSelection: this.state.ReasonSelection
+      reasonSelection: this.state.reasonSelection
     };
 
     this.props.history.push('/terms');
 
     // SEND FORM DATA TO THE DATABASE
-    // USE SEQUELIZE
-    fetch('./fake_db.json', { 
-      method: 'PUSH',
+    // USE SEQUELIZE -->
+    fetch(`http://localhost:8888/registration-server/?visitor-name=${this.state.visitorName}&visitor-company=${this.state.visitorCompany}&visited-name=${this.state.visitedName}&reason-selection=${this.state.reasonSelection}`, { 
+      method: 'POST',
       body: formPayload,
     });
     
     console.log('Send this in a POST request:', formPayload);
+    console.log(`http://localhost:8888/registration-server/?visitor-name=${this.state.visitorName}&visitor-company=${this.state.visitorCompany}&visited-name=${this.state.visitedName}&reason-selection=${this.state.reasonSelection}`);
     this.handleClearForm(e);
   }
 
   render() {
     return (
       <div>
-      <form className="container" onSubmit={this.handleFormSubmit.bind(this)}>
+      <form className="container" onSubmit={this.handleFormSubmit.bind(this)} autoComplete="off">
         <SingleInput
           inputType={'text'}
           title={'Name'}
@@ -116,7 +117,7 @@ class FormIn extends Component {
           name={'reason'}
           controlFunc={this.handleReasonSelect}
           options={this.state.reasonOptions}
-          selectedOption={this.state.ReasonSelection}
+          selectedOption={this.state.reasonSelection}
           placeholder={'Select the reason of your visit'} />
      
         <input

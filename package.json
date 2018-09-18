@@ -6,6 +6,7 @@
     "ajv": "^6.5.3",
     "express": "^4.16.3",
     "mysql2": "^1.6.1",
+    "pg": "^7.4.3",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -14,7 +15,8 @@
     "react-scripts": "1.1.5",
     "react-validation": "^3.0.7",
     "redux": "^4.0.0",
-    "sequelize": "^4.38.1"
+    "sequelize": "^4.38.1",
+    "store": "^2.0.12"
   },
   "scripts": {
     "start": "react-scripts start",
