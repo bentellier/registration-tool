@@ -94,7 +94,8 @@ class FormIn extends Component {
           name={'name'}
           controlFunc={this.handleFullNameChange}
           content={this.state.visitorName}
-          placeholder={'Type first and last name here'} />
+          placeholder={'Type first and last name here'} 
+          require={'true'} />
 
         <SingleInput
           inputType={'text'}
@@ -102,7 +103,8 @@ class FormIn extends Component {
           name={'company'}
           controlFunc={this.handleCompanyNameChange}
           content={this.state.visitorCompany}
-          placeholder={'Type your company name here'} />
+          placeholder={'Type your company name here'}
+          require={'false'} />
 
         <SingleInput
           inputType={'text'}
@@ -110,7 +112,8 @@ class FormIn extends Component {
           name={'company'}
           controlFunc={this.handleVisitedNameChange}
           content={this.state.visitedName}
-          placeholder={'Type the name of the person you are visiting'} />
+          placeholder={'Type the name of the person you are visiting'} 
+          require={'true'}/>
       
         <Select
           title={'Reason for visit'}
@@ -118,7 +121,8 @@ class FormIn extends Component {
           controlFunc={this.handleReasonSelect}
           options={this.state.reasonOptions}
           selectedOption={this.state.reasonSelection}
-          placeholder={'Select the reason of your visit'} />
+          placeholder={'Select the reason of your visit'} 
+          require={'true'} />
      
         <input
           type="submit"
