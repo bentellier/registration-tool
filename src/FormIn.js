@@ -51,6 +51,7 @@ class FormIn extends Component {
     this.setState({ reasonSelection: e.target.value }, () => console.log('reason', this.state.reasonSelection));
   }
 
+  
   handleClearForm(e) {
     e.preventDefault();
     this.setState({
@@ -72,8 +73,6 @@ class FormIn extends Component {
 
     this.props.history.push('/terms');
 
-    // SEND FORM DATA TO THE DATABASE
-    // USE SEQUELIZE -->
     fetch(`http://localhost:8888/registration-server/?visitor-name=${this.state.visitorName}&visitor-company=${this.state.visitorCompany}&visited-name=${this.state.visitedName}&reason-selection=${this.state.reasonSelection}`, { 
       method: 'POST',
       body: formPayload,
@@ -94,8 +93,8 @@ class FormIn extends Component {
           name={'name'}
           controlFunc={this.handleFullNameChange}
           content={this.state.visitorName}
-          placeholder={'Type first and last name here'} 
-          />
+          placeholder={'Type first and last name here'}
+          require={'true'} />
 
         <SingleInput
           inputType={'text'}
@@ -111,7 +110,8 @@ class FormIn extends Component {
           name={'company'}
           controlFunc={this.handleVisitedNameChange}
           content={this.state.visitedName}
-          placeholder={'Type the name of the person you are visiting'} />
+          placeholder={'Type the name of the person you are visiting'} 
+          require={'true'} />
       
         <Select
           title={'Reason for visit'}

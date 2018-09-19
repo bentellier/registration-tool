@@ -11,7 +11,7 @@ const SingleInput = (props) => (
 			value={props.content}
 			onChange={props.controlFunc}
 			placeholder={props.placeholder} 
-			 />
+			required={props.require} />
 	</div>
 );
 
