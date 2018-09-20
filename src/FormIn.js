@@ -73,13 +73,13 @@ class FormIn extends Component {
 
     this.props.history.push('/terms');
 
-    fetch(`http://localhost:8888/registration-server/?visitor-name=${this.state.visitorName}&visitor-company=${this.state.visitorCompany}&visited-name=${this.state.visitedName}&reason-selection=${this.state.reasonSelection}`, { 
+    fetch(`http://localhost:8888/registration-server/?name=${this.state.visitorName}&company=${this.state.visitorCompany}&visited=${this.state.visitedName}&reason=${this.state.reasonSelection}`, { 
       method: 'POST',
       body: formPayload,
     });
     
     console.log('Send this in a POST request:', formPayload);
-    console.log(`http://localhost:8888/registration-server/?visitor-name=${this.state.visitorName}&visitor-company=${this.state.visitorCompany}&visited-name=${this.state.visitedName}&reason-selection=${this.state.reasonSelection}`);
+    console.log(`http://localhost:8888/registration-server/?name=${this.state.visitorName}&company=${this.state.visitorCompany}&visited=${this.state.visitedName}&reason=${this.state.reasonSelection}`);
     this.handleClearForm(e);
   }
 
