@@ -1,6 +1,6 @@
 {
-  "name": "react_spa",
-  "version": "0.1.0",
+  "name": "registration_tool",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "ajv": "^6.5.3",
@@ -24,5 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "author": "Ben Tellier - Feed",
+  "license": "ISC"
 }
