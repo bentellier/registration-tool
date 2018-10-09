@@ -107,7 +107,7 @@ class FormIn extends Component {
         <SingleInput
           inputType={'text'}
           title={'Who you\'re visiting'}
-          name={'company'}
+          name={'visited'}
           controlFunc={this.handleVisitedNameChange}
           content={this.state.visitedName}
           placeholder={'Type the name of the person you are visiting'} 
