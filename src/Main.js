@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import Home from "./Home";
 import FormIn from "./FormIn";
-import FormOut from "./FormOut";
 import Terms from "./Terms";
 import Thanks from "./Thanks";
 
@@ -20,7 +19,6 @@ class Main extends Component {
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/formin" component={FormIn}/>
-            <Route path="/formout" component={FormOut}/>
             <Route path="/terms" component={Terms}/>
             <Route path="/thanks" component={Thanks}/>
           </div>

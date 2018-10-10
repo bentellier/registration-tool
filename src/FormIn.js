@@ -77,11 +77,15 @@ class FormIn extends Component {
       method: 'POST',
       body: formPayload,
     });
-    
+
     console.log('Send this in a POST request:', formPayload);
     console.log(`http://localhost:8888/registration-server/?name=${this.state.visitorName}&company=${this.state.visitorCompany}&visited=${this.state.visitedName}&reason=${this.state.reasonSelection}`);
     this.handleClearForm(e);
   }
+
+
+
+
 
   render() {
     return (

@@ -3,16 +3,18 @@ import {
   Link
 } from "react-router-dom";
 
+// var name = this.visitorName;
+
+// console.log(this.visitorName);
+
 class Thanks extends Component {
   render() {
     return (
       <div>
         <p>
-        Thanks, %%NAME_TO_PULL_FROM_DB%%
+        Thanks you,
         </p>
-        <h1 id="title"></h1>
         <p>
-
         Have a great day
         </p>
         <Link to="/">Home</Link>
@@ -20,7 +22,5 @@ class Thanks extends Component {
     );
   }
 }
-
-
 
 export default Thanks;
