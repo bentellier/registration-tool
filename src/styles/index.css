@@ -1,13 +1,25 @@
 html {
- font-size: 16px;
+	font-size: 16px;
 }
 
 body {
 	/*change bg-color for a bg-img*/
-  background-color: #2e49ff; 
-  padding: 10%;
-  margin: 0px;
-  font: 100% / 1.414 sans-serif;
+	background-color: #2e49ff; 
+	margin: 0px auto;
+	font: 100% / 1.414 sans-serif;
+	width: 100%;
+}
+
+#root {
+	width: 80%;
+	padding: 10%;
+	margin: 0px auto;
+	max-width: 600px;
+}
+
+.content {
+	margin: 120px 0px 20px;
+/*	display: block;*/
 }
 
 h1, h2, ul, li, label {
@@ -20,20 +32,24 @@ h1 {
 	font-size: 2.5em;
 }
 
-label {
-	float:left;
-}
+/*label {*/
+    /*padding: 12px 12px 12px 0;*/
+    /*display: inline-block;*/
+/*}*/
 div {
-	max-width:100%;
+	max-width:100vw;
 }
 form {
 	display: inline;
-	max-width: 100%;
+	max-width: 100vw;
 }
 ::-webkit-input-placeholder {
     color: #2e49ff;
 }
+
+
 select {
+	width: 100vw;
 	-webkit-appearance: none;
     -moz-appearance: none;
     background-position: right 50%;
@@ -47,20 +63,37 @@ select {
 .form-input {
 	display: inline-block;
 	float: left;
-	width: 90%;
-	padding: 5%;
+	width: calc(100% - 2vw - 10px);
+	max-width: calc( 600px - 2vw - 10px );
+	min-width: calc( 256px - 2vw - 10px );
+	padding: calc( 1vw + 5px );
 	border-width: 0 !important;
 	margin: 10px 0px 20px 0px;
 }
 
  .form-select {
+ 	display: inline-block;
 	float: left;
-	width: 100%;
-	padding: 5%;
+	width:100%;
+	/*width: calc(100% - 2vw - 10px);*/
+	/*max-width: calc( 600px - 2vw - 10px );*/
+	min-width: calc( 256px - 2vw - 10px );
+	padding: calc(1vw + 5px);
+	border-width: 0 !important;
 	margin: 10px 0px 20px 0px;
 }
 
+input[type=text], select, textarea {
+    /*width: 100%;*/
+    border-radius: 0px;
+    /*resize: vertical;*/
+	-webkit-box-sizing: border-box; /* For older WebKit browsers */
+	-moz-box-sizing: border-box; /* For all Gecko browsers */
+	box-sizing: border-box;
+}
+
 .btn {
+	display: inline-block;
 	float: left;
 	background: transparent;
 	padding: 10px 20px;
@@ -73,10 +106,6 @@ select {
 .container {
 	display: inline-block;
 	width: 100%;
-}
-.content {
-	margin: 120px 0px 20px;
-	display: block;
 }
 
 .terms {
