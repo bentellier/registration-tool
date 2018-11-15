@@ -90,7 +90,7 @@ class FormIn extends Component {
   render() {
     return (
       <div>
-      <form className="container" onSubmit={this.handleFormSubmit.bind(this)} autoComplete="off">
+      <form className="contentWrapper" onSubmit={this.handleFormSubmit.bind(this)} autoComplete="off">
         <SingleInput
           inputType={'text'}
           title={'Name'}
@@ -128,7 +128,7 @@ class FormIn extends Component {
         <input
           type="submit"
           className="btn btn-primary float-right active"
-          value="Done"/>
+          value="NEXT"/>
 
       </form>
       </div>

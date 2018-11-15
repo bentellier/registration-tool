@@ -7,7 +7,7 @@ const CheckboxOrRadioGroup = (props) => (
 		<div className="checkbox-group">
 			{props.options.map(option => {
 				return (
-					<label key={option} className=" capitalize">
+					<label key={option} className="terms-checkbox">
 						<input
 							className="form-checkbox"
 							name={props.setName}

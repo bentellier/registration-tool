@@ -14,8 +14,8 @@ class Main extends Component {
   render() {
     return (
       <HashRouter>
-        <div>
-          <Link to="/"><img src={require('./images/NewFeedLogo.png')} alt="Feed Logo" width="19" height="19"/></Link>
+        <div className="container">
+          <Link to="/"><img src={require('./images/NewFeedLogo_3.png')} alt="Feed Logo" width="27" height="27"/></Link>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/formin" component={FormIn}/>

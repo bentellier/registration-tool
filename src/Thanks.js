@@ -10,13 +10,11 @@ import {
 class Thanks extends Component {
   render() {
     return (
-      <div>
-        <p>
-        Thanks you,
-        </p>
-        <p>
+      <div >
+        <h2>
+        <span>Thanks you,</span> <br />
         Have a great day
-        </p>
+        </h2>
         <Link to="/">Home</Link>
       </div>
     );
