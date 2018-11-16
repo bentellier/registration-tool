@@ -48,7 +48,7 @@ class FormIn extends Component {
   }
 
   handleReasonSelect(e) {
-    this.setState({ reasonSelection: e.target.value }, () => console.log('reason', this.state.reasonSelection));
+    this.setState({ reasonSelection: e.target.value }, () => console.log('reason:', this.state.reasonSelection));
   }
 
   
@@ -97,7 +97,7 @@ class FormIn extends Component {
           name={'name'}
           controlFunc={this.handleFullNameChange}
           content={this.state.visitorName}
-          placeholder={'Type first and last name here'}
+          placeholder={'Your first and last name'}
           require={'true'} />
 
         <SingleInput
@@ -106,7 +106,7 @@ class FormIn extends Component {
           name={'company'}
           controlFunc={this.handleCompanyNameChange}
           content={this.state.visitorCompany}
-          placeholder={'Type your company name here'} />
+          placeholder={'The name of your company'} />
 
         <SingleInput
           inputType={'text'}
@@ -114,7 +114,7 @@ class FormIn extends Component {
           name={'visited'}
           controlFunc={this.handleVisitedNameChange}
           content={this.state.visitedName}
-          placeholder={'Type the name of the person you are visiting'} 
+          placeholder={'The name of the person you are visiting'} 
           require={'true'} />
       
         <Select

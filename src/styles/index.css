@@ -1,25 +1,25 @@
 @font-face {
-  font-family: "basis-grotesque-regular";
-  src: url("../fonts/basis-grotesque-regular.eot");
-  src: url("../fonts/basis-grotesque-regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/basis-grotesque-regular.woff") format("woff"),
-    url("../fonts/basis-grotesque-regular.woff2") format("woff2"),
-    url("../fonts/basis-grotesque-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "basis-grotesque-regular";
+	src: url("../fonts/basis-grotesque-regular.eot");
+	src: url("../fonts/basis-grotesque-regular.eot?#iefix")
+	  format("embedded-opentype"),
+	url("../fonts/basis-grotesque-regular.woff") format("woff"),
+	url("../fonts/basis-grotesque-regular.woff2") format("woff2"),
+	url("../fonts/basis-grotesque-regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "basis-grotesque-medium";
-  src: url("../fonts/basis-grotesque-medium.eot");
-  src: url("../fonts/basis-grotesque-medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/basis-grotesque-medium.woff") format("woff"),
-    url("../fonts/basis-grotesque-medium.woff2") format("woff2"),
-    url("../fonts/basis-grotesque-medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "basis-grotesque-medium";
+	src: url("../fonts/basis-grotesque-medium.eot");
+	src: url("../fonts/basis-grotesque-medium.eot?#iefix")
+	  format("embedded-opentype"),
+	url("../fonts/basis-grotesque-medium.woff") format("woff"),
+	url("../fonts/basis-grotesque-medium.woff2") format("woff2"),
+	url("../fonts/basis-grotesque-medium.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }
 
 html {
@@ -42,17 +42,15 @@ body {
 	align-items: center;
 	display:flex;
 	font: 100% / 1.414 sans-serif;
-	
-  /* Then we define the flow direction 
+  	/* Then we define the flow direction 
      and if we allow the items to wrap 
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
-  flex-flow: wrap;
-  
-  /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+   	* Remember this is the same as:
+   	* flex-direction: row;
+   	* flex-wrap: wrap;
+   	*/
+  	flex-flow: wrap;
+ 	 /* Then we define how is distributed the remaining space */
+  	justify-content: space-around;
 	height:100%;
 	font-family: "basis-grotesque-medium", arial, sans;
 }
@@ -94,12 +92,16 @@ h1, h2 {
 	letter-spacing: -3.3px;
 	font-weight: lighter;
 	padding: 0px 0px 30px 0px;
+	text-decoration: none;
 }
 
 h1 span, h2 span {
 	color: #61FDC0;
 }
 
+a {
+	text-decoration: none;
+}
 /*label {*/
     /*padding: 12px 12px 12px 0;*/
     /*display: inline-block;*/
